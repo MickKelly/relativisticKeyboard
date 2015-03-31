@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lKP-2H-mSg" customClass="butPressMe">
+                                <rect key="frame" x="250" y="83" width="100" height="30"/>
+                                <state key="normal" title="Push Me">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="aName:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8Hj-ox-3pZ"/>
+                                </connections>
+                            </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="3gj-Oq-tWn">
+                                <rect key="frame" x="239" y="157" width="123" height="29"/>
+                                <segments>
+                                    <segment title="First"/>
+                                    <segment title="Second"/>
+                                </segments>
+                            </segmentedControl>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="I'm a text" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="i90-3j-Cgd">
+                                <rect key="frame" x="252" y="270" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <slider opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="I0c-67-bUt">
+                                <rect key="frame" x="241" y="373" width="118" height="31"/>
+                            </slider>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Omj-5K-RMj">
+                                <rect key="frame" x="276" y="439" width="51" height="31"/>
+                            </switch>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="Omj-5K-RMj" secondAttribute="centerX" id="3zh-QD-90J"/>
+                            <constraint firstAttribute="centerX" secondItem="I0c-67-bUt" secondAttribute="centerX" id="8IY-a7-L05"/>
+                            <constraint firstItem="i90-3j-Cgd" firstAttribute="top" secondItem="3gj-Oq-tWn" secondAttribute="bottom" constant="85" id="9uA-Om-bCG"/>
+                            <constraint firstAttribute="centerX" secondItem="3gj-Oq-tWn" secondAttribute="centerX" id="AX4-th-CIr"/>
+                            <constraint firstItem="I0c-67-bUt" firstAttribute="top" secondItem="i90-3j-Cgd" secondAttribute="bottom" constant="73" id="F5Z-aC-xEd"/>
+                            <constraint firstAttribute="centerX" secondItem="i90-3j-Cgd" secondAttribute="centerX" id="OI3-ch-78c"/>
+                            <constraint firstItem="Omj-5K-RMj" firstAttribute="top" secondItem="I0c-67-bUt" secondAttribute="bottom" constant="36" id="Yd2-AY-AiW"/>
+                            <constraint firstItem="3gj-Oq-tWn" firstAttribute="top" secondItem="lKP-2H-mSg" secondAttribute="bottom" constant="44" id="d0w-TT-naP"/>
+                            <constraint firstAttribute="centerX" secondItem="lKP-2H-mSg" secondAttribute="centerX" id="qBq-ul-IPe"/>
+                            <constraint firstItem="lKP-2H-mSg" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="63" id="yvF-R2-ohf"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="aName" destination="lKP-2H-mSg" id="ct5-7a-AeJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
